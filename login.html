@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xarid.uz — login / sign up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- CHAP TOMON: BRAND -->
+    <aside class="brand">
+      <div class="ring"></div>
+
+      <a class="logo" href="#">
+        <svg viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#18d9c2" />
+              <stop offset="1" stop-color="#0a6fa8" />
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe08a" />
+              <stop offset="1" stop-color="#f0a92e" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#g1)" />
+          <path d="M17 19v-3a7 7 0 0 1 14 0v3" stroke="#fff" stroke-width="2.6" stroke-linecap="round" fill="none" />
+          <path d="M12.5 19h23l-1.8 17.2a3.5 3.5 0 0 1-3.5 3.1H17.8a3.5 3.5 0 0 1-3.5-3.1z" fill="#fff" />
+          <path d="M19.5 24.5l9 10M28.5 24.5l-9 10" stroke="url(#g2)" stroke-width="3.6" stroke-linecap="round" />
+        </svg>
+        <b>Xarid<i>.uz</i></b>
+      </a>
+
+      <div class="hero">
+        <h1>Hamma xaridlar va imkoniyatlar bir joyda, ishonchli va tez.</h1>
+        <p>Minglab sotuvchilar, millionlab mahsulotlar. Tanlang, buyurtma bering va eshigingizgacha yetkazib berishsin.
+        </p>
+      </div>
+
+      <div class="chips">
+        <div class="chip"><strong>2 mln+</strong><span>mahsulot</span></div>
+        <div class="chip"><strong>50 000+</strong><span>sotuvchi</span></div>
+        <div class="chip"><strong>24 soat</strong><span>ichida yetkazish</span></div>
+      </div>
+    </aside>
+
+    <!-- O'NG TOMON: FORMA -->
+    <main class="panel">
+      <input class="sr" type="radio" name="mode" id="m-in" checked>
+      <input class="sr" type="radio" name="mode" id="m-up">
+
+      <!-- Til tanlash (ishlamaydi, faqat ko'rinish) -->
+      <details class="lang">
+        <summary>O’zbekcha ▾</summary>
+        <ul>
+          <li class="on"><code>UZ</code> O’zbekcha</li>
+          <li><code>RU</code> Русский</li>
+          <li><code>EN</code> English</li>
+        </ul>
+      </details>
+
+      <div class="box">
+        <div class="seg">
+          <i class="ind"></i>
+          <label for="m-in">Kirish</label>
+          <label for="m-up">Ro’yxatdan o’tish</label>
+        </div>
+
+        <!-- KIRISH -->
+        <form class="f in">
+          <h2>Qaytganingiz bilan!</h2>
+          <p class="sub">Hisobingizga kirib, xaridni davom ettiring.</p>
+
+          <label class="fld"><input type="text" placeholder=" "><span>Telefon yoki e-pochta</span></label>
+          <label class="fld"><input type="password" placeholder=" "><span>Parol</span></label>
+
+          <div class="row">
+            <label class="chk"><input type="checkbox"> Meni eslab qol</label>
+            <a href="#">Parolni unutdingizmi?</a>
+          </div>
+
+          <!-- 1) SILKANGIZNI SHU YERGA QO'YING -->
+          <a class="go" href="sahifa.html">Kirish</a>
+
+          <div class="or">yoki</div>
+          <div class="soc">
+            <!-- 2) GOOGLE SILKASI -->
+            <a href="#  ">
+              <svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              Google
+            </a>
+            <!-- 3) TELEGRAM SILKASI -->
+            <a href="#">
+              <svg viewBox="0 0 240 240" width="22" height="22" aria-hidden="true">
+                <defs>
+                  <linearGradient id="tg" x1="120" y1="0" x2="120" y2="240" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#2AABEE" />
+                    <stop offset="1" stop-color="#229ED9" />
+                  </linearGradient>
+                </defs>
+                <circle cx="120" cy="120" r="120" fill="url(#tg)" />
+                <path fill="#fff"
+                  d="M54.3 118.8c35-15.2 58.3-25.3 70-30.2 33.3-13.9 40.3-16.3 44.8-16.4 1 0 3.2.2 4.7 1.4 1.2 1 1.5 2.3 1.7 3.3.2 1 .4 3.1.2 4.7-1.8 19-9.6 65.1-13.6 86.3-1.7 9-5 12-8.2 12.3-7 .6-12.3-4.6-19-9-10.6-6.9-16.5-11.2-26.8-18-11.9-7.8-4.2-12.1 2.6-19.1 1.8-1.8 32.5-29.8 33.1-32.3.1-.3.1-1.5-.6-2.1-.7-.6-1.7-.4-2.5-.2-1.1.2-17.9 11.4-50.6 33.5-4.8 3.3-9.1 4.9-13 4.8-4.3-.1-12.5-2.4-18.7-4.4-7.5-2.4-13.5-3.7-13-7.9.3-2.2 3.3-4.4 8.9-6.7z" />
+              </svg>
+              Telegram
+            </a>
+          </div>
+
+          <p class="alt">Hisobingiz yo’qmi? <label for="m-up">Ro’yxatdan o’ting</label></p>
+        </form>
+
+        <!-- RO'YXATDAN O'TISH -->
+        <form class="f up">
+          <h2>Xarid.uz’ga xush kelibsiz</h2>
+          <p class="sub">Hisob oching va birinchi buyurtmangizni bering.</p>
+
+          <label class="fld"><input type="text" placeholder=" "><span>Ism va familiya</span></label>
+          <label class="fld"><input type="number" placeholder=" "><span>Telefon raqam (+998)</span></label>
+          <label class="fld"><input type="email" placeholder=" "><span>E-pochta</span></label>
+          <label class="fld"><input type="password" placeholder=" "><span>Parol yarating</span></label>
+
+          <label class="chk"><input type="checkbox"> Foydalanish shartlari va maxfiylik siyosati bilan roziman</label>
+
+          <!-- 4) SILKANGIZNI SHU YERGA QO'YING -->
+          <a class="go" href="sahifa.html">Hisob ochish</a>
+
+          <p class="alt">Hisobingiz bormi? <label for="m-in">Kiring</label></p>
+        </form>
+      </div>
+    </main>
+
+  </div>
+</body>
+
+</html>

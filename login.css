@@ -1,0 +1,536 @@
+:root {
+    --gold: #c9a45c;
+    --gold-soft: #e6cf9f;
+    --teal: #12c4b0;
+    --ink: #0b1220;
+    --mut: #667085;
+    --line: #e6e8ee;
+    --field: #f7f8fa;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: #f2f3f6;
+    line-height: 1.5;
+}
+
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.sr {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+a {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ---------- BRAND ---------- */
+.brand {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 48px 56px;
+    color: #fff;
+    background:
+        radial-gradient(70% 55% at 15% 0%, rgba(18, 196, 176, .22), transparent 70%),
+        #070d16;
+}
+
+.ring {
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    right: -230px;
+    top: 50%;
+    margin-top: -310px;
+    border: 1px solid rgba(201, 164, 92, .28);
+    border-radius: 50%;
+}
+
+.ring::after {
+    content: "";
+    position: absolute;
+    inset: 80px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 50%;
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    animation: fade 1s both;
+}
+
+.logo b {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.logo i {
+    font-style: normal;
+    color: var(--gold);
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    animation: fade 1.1s .15s both;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 3.5vw, 48px);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 430px;
+    font-size: 16.5px;
+    color: #9aa7b8;
+}
+
+.chips {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    animation: fade 1.1s .3s both;
+}
+
+.chip {
+    padding: 14px 20px;
+    border: 1px solid rgba(201, 164, 92, .3);
+    border-radius: 14px;
+}
+
+.chip strong {
+    display: block;
+    font-size: 17px;
+    line-height: 1.2;
+    color: var(--gold-soft);
+}
+
+.chip span {
+    font-size: 13px;
+    color: #9aa7b8;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+/* ---------- PANEL ---------- */
+.panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 28px 40px;
+}
+
+/* Til tanlash */
+.lang {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    z-index: 5;
+}
+
+.lang summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 9px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: border-color .25s;
+}
+
+.lang summary::-webkit-details-marker {
+    display: none;
+}
+
+.lang summary:hover {
+    border-color: var(--gold);
+}
+
+.lang ul {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    min-width: 180px;
+    padding: 6px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 20px 40px -20px rgba(10, 20, 40, .3);
+    animation: fade .25s both;
+}
+
+.lang li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lang li:hover {
+    background: var(--field);
+}
+
+.lang li.on {
+    font-weight: 800;
+}
+
+.lang code {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 6px;
+    border-radius: 6px;
+    color: var(--gold-soft);
+    background: var(--ink);
+}
+
+/* Karta */
+.box {
+    width: 100%;
+    max-width: 430px;
+    padding: 34px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px -40px rgba(10, 20, 40, .35);
+    animation: fade 1s .1s both;
+}
+
+/* Tab tugmalari */
+.seg {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4px;
+    margin-bottom: 26px;
+    border-radius: 14px;
+    background: var(--field);
+    border: 1px solid var(--line);
+}
+
+.seg label {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--mut);
+    cursor: pointer;
+    transition: color .35s;
+}
+
+.ind {
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    border-radius: 10px;
+    background: var(--ink);
+    transition: transform .45s cubic-bezier(.65, 0, .2, 1);
+}
+
+#m-in:checked~.box label[for="m-in"],
+#m-up:checked~.box label[for="m-up"] {
+    color: var(--gold-soft);
+}
+
+#m-up:checked~.box .ind {
+    transform: translateX(100%);
+}
+
+/* Formalar */
+.f {
+    display: none;
+    gap: 16px;
+}
+
+#m-in:checked~.box .in,
+#m-up:checked~.box .up {
+    display: grid;
+    animation: fade .5s both;
+}
+
+.f h2 {
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+}
+
+.sub {
+    margin-top: -8px;
+    color: var(--mut);
+}
+
+/* Suzuvchi yozuvli maydon */
+.fld {
+    position: relative;
+    display: block;
+}
+
+.fld input {
+    width: 100%;
+    height: 56px;
+    padding: 22px 16px 6px;
+    font: 500 15px 'Manrope', sans-serif;
+    color: var(--ink);
+    background: var(--field);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    outline: 0;
+    transition: border-color .25s, background .25s;
+}
+
+.fld span {
+    position: absolute;
+    left: 16px;
+    top: 17px;
+    color: var(--mut);
+    pointer-events: none;
+    transition: all .2s;
+}
+
+.fld input:focus+span,
+.fld input:not(:placeholder-shown)+span {
+    top: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.fld input:focus {
+    background: #fff;
+    border-color: var(--gold);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 13.5px;
+}
+
+.row a {
+    color: var(--mut);
+    font-weight: 600;
+}
+
+.row a:hover {
+    color: var(--ink);
+}
+
+.chk {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: var(--mut);
+    cursor: pointer;
+}
+
+.chk input {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--ink);
+    cursor: pointer;
+}
+
+/* Asosiy tugma (havola) */
+.go {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background .3s, transform .3s;
+}
+
+.go::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: translateX(-50%);
+    transition: width .4s ease;
+}
+
+.go:hover {
+    background: #121b2e;
+    transform: translateY(-1px);
+}
+
+.go:hover::after {
+    width: 44px;
+}
+
+.go:active {
+    transform: none;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--mut);
+}
+
+.or::before,
+.or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+}
+
+/* Google va Telegram */
+.soc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.soc a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: border-color .3s;
+}
+
+.soc a:hover {
+    border-color: var(--gold);
+}
+
+.soc svg {
+    flex: none;
+}
+
+.alt {
+    text-align: center;
+    font-size: 14px;
+    color: var(--mut);
+}
+
+.alt label {
+    color: var(--ink);
+    font-weight: 800;
+    cursor: pointer;
+    border-bottom: 1px solid var(--gold);
+}
+
+/* Klaviatura fokusi */
+a:focus-visible,
+summary:focus-visible,
+.chk input:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* ---------- MOBIL ---------- */
+@media (max-width: 900px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        padding: 28px 24px;
+        gap: 16px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .chips,
+    .ring {
+        display: none;
+    }
+
+    .panel {
+        padding: 70px 16px 32px;
+        align-items: flex-start;
+    }
+
+    .lang {
+        top: 16px;
+        right: 16px;
+    }
+
+    .box {
+        padding: 26px 20px;
+        border-radius: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
